@@ -22,6 +22,7 @@ you info and data instead "YOUR-API-KEY-AND-INFO".
 
 # home screen change city
 auto complete places from google
+<br/>
 ![](./gif/google-search-auto-place.gif)
 
 # restaurant screen
