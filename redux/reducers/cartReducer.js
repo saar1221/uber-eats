@@ -11,11 +11,6 @@ let cartReducer = (state = defaultState, action) => {
       let newState = { ...state };
 
       if (action.payload.checkBoxValue) {
-        console.log(" ADD TO CART NEW STATE");
-        console.log(" ADD TO CART NEW STATE");
-        console.log(action.payload);
-        console.log(" ADD TO CART NEW STATE");
-        console.log(" ADD TO CART NEW STATE");
         newState.selectedItems = {
           items: [...newState.selectedItems.items, action.payload],
           restaurantName: action.payload.restaurantName,
@@ -32,7 +27,6 @@ let cartReducer = (state = defaultState, action) => {
           restaurantName: action.payload.restaurantName,
         };
       }
-      console.log("NEW STATE!!!@@@@!@!@!@!@ check all the data", newState);
       return newState;
     }
 

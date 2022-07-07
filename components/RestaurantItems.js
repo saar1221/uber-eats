@@ -40,7 +40,6 @@ const RestaurantImage = props => {
   return (
     <View>
       <Image
-        // source={require("../assets/images/restaurant.jpg")}
         source={{ uri: props.image_url }}
         style={{ width: "100%", height: 210 }}
       />
@@ -112,8 +111,3 @@ const styles = StyleSheet.create({
 });
 
 export default RestaurantItems;
-
-{
-  //   uri: "https://media.vanityfair.com/photos/624db93288fcf914e1a594bc/master/w_1600%2Cc_limit/Steven%2520Joyce-JOS2021050D00077.jpg",
-  // uri: "https://reactjs.org/logo-og.png",
-}

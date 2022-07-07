@@ -3,8 +3,10 @@ import { StyleSheet, Text, View, TouchableOpacity, Modal } from "react-native";
 import { useSelector } from "react-redux";
 import OrderItem from "./OrderItem";
 import firebase from "../firebase";
+import LottieView from "lottie-react-native";
 
 const ViewCart = ({ navigation }) => {
+  const [loading, setLoading] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const { items, restaurantName } = useSelector(
     state => state.cartReducer.selectedItems
@@ -17,8 +19,8 @@ const ViewCart = ({ navigation }) => {
 
   const totalUsd = `$${Math.round((total + Number.EPSILON) * 100) / 100}`;
 
-  //fire base  function
   const addOrderToFireBase = () => {
+    setLoading(true);
     const db = firebase.firestore();
 
     const dataStructure = items.map((item, index) => {
@@ -26,21 +28,21 @@ const ViewCart = ({ navigation }) => {
     });
 
     db.collection("orders")
-      .doc()
-      .set({
+      .add({
         items: dataStructure,
         restaurantName: restaurantName,
         createAt: firebase.firestore.FieldValue.serverTimestamp(),
       })
       .then(() => {
         console.log("Document successfully written!");
+        setTimeout(() => {
+          setLoading(false);
+          navigation.navigate("OrderCompletedScreen");
+        }, 2000);
       })
       .catch(error => {
         console.error("Error writing document: ", error);
       });
-
-    setModalVisible(false);
-    navigation.navigate("OrderCompletedScreen");
   };
 
   const checkoutModalContent = () => {
@@ -61,6 +63,7 @@ const ViewCart = ({ navigation }) => {
                 style={styles.checkoutBtn}
                 onPress={() => {
                   addOrderToFireBase();
+                  setModalVisible(false);
                 }}
               >
                 <Text style={{ color: "white", fontSize: 20 }}>Checkout</Text>
@@ -95,6 +98,28 @@ const ViewCart = ({ navigation }) => {
               </View>
             </TouchableOpacity>
           </View>
+        </View>
+      ) : (
+        <></>
+      )}
+      {loading ? (
+        <View
+          style={{
+            backgroundColor: "black",
+            position: "absolute",
+            opacity: 0.6,
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100%",
+            width: "100%",
+          }}
+        >
+          <LottieView
+            style={{ height: 200 }}
+            source={require("../assets/animations/scanner.json")}
+            autoPlay={true}
+            speed={3}
+          />
         </View>
       ) : (
         <></>

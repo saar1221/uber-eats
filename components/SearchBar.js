@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import AntDesing from "react-native-vector-icons/AntDesign";
+import AntDesign from "react-native-vector-icons/AntDesign";
 
 function SearchBar(props) {
   return (
@@ -28,7 +28,7 @@ function SearchBar(props) {
         renderRightButton={() => {
           return (
             <View style={styles.search}>
-              <AntDesing
+              <AntDesign
                 name={"clockcircle"}
                 size={12}
                 color={"black"}

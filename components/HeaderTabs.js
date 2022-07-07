@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 function HeaderTabs(props) {
   return (
-    <View style={styles.headeContainer}>
+    <View style={styles.headContainer}>
       <HeaderButton
         btnTitle={"Delivery"}
         activeTab={props.activeTab}
@@ -42,7 +42,7 @@ function HeaderButton(props) {
 }
 
 const styles = StyleSheet.create({
-  headeContainer: {
+  headContainer: {
     flexDirection: "row",
     alignSelf: "center",
   },

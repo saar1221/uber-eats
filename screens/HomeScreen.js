@@ -6,8 +6,7 @@ import Categories from "../components/Categories";
 import RestaurantItems from "../components/RestaurantItems";
 import BottomTabs from "../components/BottomTabs";
 
-const YELP_API_KEY =
-  "fsRxvsjliLB3aDMoT1GIw7CfT0uw0Xn0r9xv35HA3ktW9Ex_lq-p84Hv_DMABbJ3mDj4ShkwUB_eZYUw3e_sN08DtwN2fA-zrQxV_2XLl6c_hZkQchqYLNb006zCYnYx";
+const YELP_API_KEY = "YOUR-API-KEY-AND-INFO";
 
 function HomeScreen({ navigation }) {
   const [restaurantData, setRestaurantData] = useState([]);
