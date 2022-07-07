@@ -18,7 +18,7 @@ you info and data instead "YOUR-API-KEY-AND-INFO".
 
 
 # home screen
-![](https://media3.giphy.com/media/RtdRhc7TxBxB0YAsK6/giphy.gif)
+![](./gif/gomeScreen.gif)
 
 # home screen change city
 ![](https://media3.giphy.com/media/RtdRhc7TxBxB0YAsK6/giphy.gif)
