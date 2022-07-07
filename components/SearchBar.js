@@ -8,7 +8,7 @@ function SearchBar(props) {
   return (
     <View style={styles.searchContainer}>
       <GooglePlacesAutocomplete
-        query={{ key: "AIzaSyDdhnQ6_E2KIbj-sZAQ_1xVrHU-fRHZGEo" }}
+        query={{ key:   "YOUR-API-KEY-AND-INFO" }}
         onPress={(data, ditale = null) => {
           const city = data.description.split(",")[0];
           props.cityHandler(city);
