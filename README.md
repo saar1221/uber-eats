@@ -21,6 +21,18 @@ you info and data instead "YOUR-API-KEY-AND-INFO".
 ![](./gif/homeScreen.gif)
 
 # home screen change city
-![](https://media3.giphy.com/media/RtdRhc7TxBxB0YAsK6/giphy.gif)
+auto complete places from google
+![](./gif/google-search-auto-place.gif)
+
+# restaurant screen
+![](./gif/restaurant-screen.gif)
+
+# checkout modal screen 
+![](./gif/checkout-modal.gif)
+
+# make order and complete screen
+![](./gif/loading-and-complete-order.gif)
+
+
 
 
