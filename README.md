@@ -1,4 +1,8 @@
+# pay attention  it takes time to load the GIF !!!!
+
 # uber-eats-challenge
+
+App adapted for Android and IOS, The app have dynamic data allow the flexibility of searching for restaurants by city in the app, uses animations and loading screens, with an impressive design similar to the original app, of course the use of technologies like Redux and Navigation, restaurants data from yelp API, and DB on firebase cloud.
 
 i delete all the api keys and all connection id so you put 
 you info and data instead "YOUR-API-KEY-AND-INFO".
