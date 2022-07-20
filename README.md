@@ -1,4 +1,4 @@
-# pay attention. It takes time to load the GIF !!!!
+# pay attention  it takes time to load the GIF !!!!
 
 # uber-eats-challenge
 
